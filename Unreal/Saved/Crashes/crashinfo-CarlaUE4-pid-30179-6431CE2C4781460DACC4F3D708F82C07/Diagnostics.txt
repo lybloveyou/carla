@@ -1,0 +1,32 @@
+Generating report for minidump
+
+Application version 4.26.2.0
+ ... built from changelist 0
+
+OS version Linux 5.4.0-90-generic (network name: zgzhaopc)
+Running 48 x86_64 processors (48 logical cores)
+Exception was "SIGSEGV: invalid attempt to write memory at address 0x0000000000000003"
+
+<SOURCE START>
+<SOURCE END>
+
+<CALLSTACK START>
+libUE4Editor-Core.so!FGenericPlatformMisc::RaiseException(unsigned int) [/home/zgzhao/UnrealEngine_4.26/Engine/Source/Runtime/Core/Private/GenericPlatform/GenericPlatformMisc.cpp:472]
+libUE4Editor-Core.so!FOutputDevice::LogfImpl(char16_t const*, ...) [/home/zgzhao/UnrealEngine_4.26/Engine/Source/Runtime/Core/Private/Misc/OutputDevice.cpp:61]
+libUE4Editor-Core.so!AssertFailedImplV(char const*, char const*, int, char16_t const*, __va_list_tag*) [/home/zgzhao/UnrealEngine_4.26/Engine/Source/Runtime/Core/Private/Misc/AssertionMacros.cpp:104]
+libUE4Editor-Core.so!FDebug::CheckVerifyFailedImpl(char const*, char const*, int, char16_t const*, ...) [/home/zgzhao/UnrealEngine_4.26/Engine/Source/Runtime/Core/Private/Misc/AssertionMacros.cpp:458]
+libUE4Editor-Engine.so!FVirtualTextureChunkDDCCache::Initialize() [/home/zgzhao/UnrealEngine_4.26/Engine/Source/Runtime/Engine/Private/VT/VirtualTextureChunkDDCCache.cpp:216]
+libUE4Editor-Engine.so!FVirtualTextureChunkStreamingManager::FVirtualTextureChunkStreamingManager() [/home/zgzhao/UnrealEngine_4.26/Engine/Source/Runtime/Engine/Private/VT/VirtualTextureChunkManager.cpp:28]
+libUE4Editor-Engine.so!FStreamingManagerCollection::FStreamingManagerCollection() [/home/zgzhao/UnrealEngine_4.26/Engine/Source/Runtime/Engine/Private/ContentStreaming.cpp:788]
+libUE4Editor-Engine.so!IStreamingManager::Get() [/home/zgzhao/UnrealEngine_4.26/Engine/Source/Runtime/Engine/Private/ContentStreaming.cpp:367]
+UE4Editor!FEngineLoop::Exit() [/home/zgzhao/UnrealEngine_4.26/Engine/Source/Runtime/Launch/Private/LaunchEngineLoop.cpp:4129]
+UE4Editor!GuardedMain(char16_t const*) [/home/zgzhao/UnrealEngine_4.26/Engine/Source/Runtime/Launch/Private/Launch.cpp:183]
+libUE4Editor-UnixCommonStartup.so!CommonUnixMain(int, char**, int (*)(char16_t const*), void (*)()) [/home/zgzhao/UnrealEngine_4.26/Engine/Source/Runtime/Unix/UnixCommonStartup/Private/UnixCommonStartup.cpp:264]
+libc.so.6!__libc_start_main(+0xe6)
+UE4Editor!_start()
+
+<CALLSTACK END>
+
+0 loaded modules
+
+Report end!

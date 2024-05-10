@@ -108,7 +108,7 @@ def generate_json_package(folder, package_name, use_carla_materials):
         # build and write the .json
         f = open("%s/%s.json" % (folder, package_name), "w")
         my_json = {'maps': json_maps, 'props': []}
-        serialized = json.dumps(my_json, sort_keys=False, indent=3)
+        serialized = json.s(my_json, sort_keys=False, indent=3)
         f.write(serialized)
         f.close()
         # add

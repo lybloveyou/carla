@@ -195,6 +195,13 @@ class World(object):
         self.world = carla_world
         self.sync = args.sync
         self.actor_role_name = args.rolename
+        # self.world.unload_map_layer(carla.MapLayer.All)
+        # self.settings = self.world.get_settings()
+        # self.settings.no_rendering_mode = True
+        # self.world.apply_settings(self.settings)
+
+
+        
         try:
             self.map = self.world.get_map()
         except RuntimeError as error:
